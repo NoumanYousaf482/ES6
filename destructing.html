@@ -3,22 +3,29 @@
 
 <body>
 
-<script>
-function calculate(a, b) {
-  const add = a + b;
-  const subtract = a - b;
-  const multiply = a * b;
-  const divide = a / b;
+<p id="demo"></p>
 
-  return [add, subtract, multiply, divide];
+<script>
+const vehicleOne = {
+  brand: 'Ford',
+  model: 'Mustang',
+  type: 'car',
+  year: 2021,
+  color: 'red',
+  registration: {
+    city: 'Houston',
+    state: 'Texas',
+    country: 'USA'
+  }
 }
 
-const [add, subtract, multiply, divide] = calculate(4, 7);
+myVehicle(vehicleOne)
 
-document.write("<p>Sum: " + add + "</p>");
-document.write("<p>Difference " + subtract + "</p>");
-document.write("<p>Product: " + multiply + "</p>");
-document.write("<p>Quotient " + divide + "</p>");
+function myVehicle({ model, registration: { state } }) {
+  const message = 'My ' + model + ' is registered in ' + state + '.';
+
+  document.getElementById("demo").innerHTML = message;
+}
 </script>
 
 </body>
