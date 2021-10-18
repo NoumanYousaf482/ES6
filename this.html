@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>This function</title>
+  </head>
+  <body>
+    <<button id="me">OOPS</button>
+    <script>
+      function crazy(){
+        console.log(this);
+      }
+      var sane=()=> console.log(this);
+
+      var button=document.getElementById('me');
+      button.addEventListener('click',sane);
+
+    </script>
+  </body>
+</html>
