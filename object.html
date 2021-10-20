@@ -1,18 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Obj</title>
+  </head>
+  <body>
+    <script>
+      let score=900;
+      let mood="angry";
 
-<body>
-
-<script>
-class Car {
-  constructor(name) {
-    this.brand = name;
-  }
-}
-
-mycar = new Car("Toyota");
-document.write(mycar.brand);
-</script>
-
-</body>
+      let myObj={
+        user:'john',
+        score:200,
+        angry:99,
+        highscore(){
+          console.log('your score is '+this.score)
+        }
+      };
+      console.log(myObj.score);
+      console.log(myObj.highscore());
+      console.log(myObj[mood]);
+    </script>
+  </body>
 </html>
