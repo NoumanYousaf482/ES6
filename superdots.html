@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Super Dots</title>
+  </head>
+  <body>
+    <script>
+    function deposit(...money) {
+      console.log(money);
+      let balance=0;
+      for (let i=0;i<money.length;i++){
+        balance+=money[i];
+      }
+      return balance;
+    }
+    console.log(deposit(100,40,50,30));
+
+    let addmoney=[34,66,99,24,36];
+    console.log(...addmoney);
+    console.log(Math.min(...addmoney));
+    </script>
+  </body>
+</html>
